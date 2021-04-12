@@ -48,6 +48,14 @@ client.connect(err => {
             })
     })
 
+    app.post('/addADoctor', (req, res) => {
+        const file = req.files.file;
+        const name = req.body.name;
+        const email = req.body.email;
+        const newImg = file.data;
+        console.log(file, name , email);
+    })
+   
 });
 
 
